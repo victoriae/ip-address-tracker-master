@@ -102,6 +102,7 @@ header {
 
 .user-info {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   z-index: 2;
   max-width: 1110px;
@@ -142,4 +143,58 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .item {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .item:nth-child(2) {
+    border-right: 0;
+  }
+  .item:nth-child(3), .item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .user-info {
+    margin: 50px 24px 0;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .input-group {
+    margin: 0 24px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  h2 {
+    padding: 26px 0 30px;
+    font-size: 1.6rem;
+  }
+  .arrow-button {
+    width: 74px;
+  }
+  .user-info {
+    text-align: center;
+    margin: 25px 24px 0;
+    padding: 23px 0;
+  }
+  .item {
+    width: 100%;
+    border-right: 0;
+    margin-bottom: 20px;
+  }
+  .info-title {
+    font-size: 0.65rem;
+  }
+  .data {
+    font-size: 1.2rem;
+  }
+  #location, #postalcode {
+    display: inline-flex;
+  }
 }
